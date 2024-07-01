@@ -11,4 +11,4 @@
 Repair mechs while on the road.
 
 ## Prerequisites
-Requires Visual Studio with .NET 4.8.0 SDK to compile the assemblies.
+Requires Visual Studio with .NET Framework 4.8.0 SDK to compile the assemblies.
