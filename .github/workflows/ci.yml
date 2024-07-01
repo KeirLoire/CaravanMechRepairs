@@ -28,7 +28,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: RimTerra
+          name: CaravanMechRepairs
           path: |
             1.5
             About\About.xml
