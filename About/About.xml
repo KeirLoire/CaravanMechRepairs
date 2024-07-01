@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <packageId>KeirLoire.CaravanMechRepairs</packageId>
+    <name>Caravan Mech Repairs</name>
+    <author>KeirLoire</author>
+    <url>https://github.com/KeirLoire/CaravanMechRepairs</url>
+    <modIconPath IgnoreIfNoMatchingField="True">About/Logo</modIconPath>
+    <modVersion>1.0.0</modVersion>
+    <supportedVersions>
+        <li>1.5</li>
+    </supportedVersions>
+    <description>Repairs mechanoids while on the road.</description>
+    <modDependencies>
+        <li>
+            <packageId>Ludeon.RimWorld.Biotech</packageId>
+            <displayName>Biotech</displayName>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Ludeon.RimWorld</li>
+        <li>Ludeon.RimWorld.Royalty</li>
+        <li>Ludeon.RimWorld.Ideology</li>
+        <li>Ludeon.RimWorld.Biotech</li>
+    </loadAfter>
+</ModMetaData>
