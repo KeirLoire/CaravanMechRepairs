@@ -5,7 +5,7 @@
     <author>KeirLoire</author>
     <url>https://github.com/KeirLoire/CaravanMechRepairs</url>
     <modIconPath IgnoreIfNoMatchingField="True">About/CaravanMechRepairs_Logo</modIconPath>
-    <modVersion>1.0.0</modVersion>
+    <modVersion>1.0.1</modVersion>
     <supportedVersions>
         <li>1.5</li>
     </supportedVersions>
