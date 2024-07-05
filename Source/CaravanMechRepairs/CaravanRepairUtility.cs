@@ -10,15 +10,19 @@ namespace CaravanMechRepairs
     {
         private static List<Pawn> MechsNeedingRepair = new List<Pawn>();
 
-        private const int RepairIntervalTicks = 625;
-
         public static void CheckRepair(Caravan caravan)
         {
 
             foreach (var pawn in caravan.pawns)
             {
-                if (IsMechanitorValid(pawn) && pawn.IsHashIntervalTick(RepairIntervalTicks))
-                    TryRepairToAnyMech(caravan);
+                if (IsMechanitorValid(pawn))
+                {
+                    var repairIntervalTicks = (int)(1f / pawn.GetStatValue(StatDefOf.MechRepairSpeed) * 600f);
+
+                    if (pawn.IsHashIntervalTick(repairIntervalTicks))
+                        TryRepairToAnyMech(caravan);
+                }
+                    
             }
         }
 
