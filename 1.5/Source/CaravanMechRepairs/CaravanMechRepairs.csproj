@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Copy SourceFiles="$(OutDir)\$(AssemblyName).dll" DestinationFolder="$(ProjectDir)\..\..\1.5\Assemblies\" />
+    <Copy SourceFiles="$(OutDir)\$(AssemblyName).dll" DestinationFolder="$(ProjectDir)\..\..\Assemblies\" />
   </Target>
 
 </Project>

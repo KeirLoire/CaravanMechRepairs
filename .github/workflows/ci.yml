@@ -19,18 +19,21 @@ jobs:
 
       - name: Restore NuGet packages
         run: |
-          Set-Location Source
-          nuget restore
+          nuget restore 1.5\Source
+          nuget restore 1.6\Source
 
       - name: Build assemblies
-        run: msbuild Source\CaravanMechRepairs.sln /p:Configuration=Release
+        run: |
+          msbuild 1.5\Source\CaravanMechRepairs.sln /p:Configuration=Release
+          msbuild 1.6\Source\CaravanMechRepairs.sln /p:Configuration=Release
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: CaravanMechRepairs
           path: |
-            1.5
+            1.5\Assemblies
+            1.6\Assemblies
             About\About.xml
             About\Preview.png
             Textures\**\*.png
