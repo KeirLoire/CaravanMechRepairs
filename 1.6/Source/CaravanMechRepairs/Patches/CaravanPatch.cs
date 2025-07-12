@@ -12,10 +12,10 @@ namespace CaravanMechRepairs.Patches
         {
             var type = AccessTools.TypeByName("RimWorld.Planet.Caravan");
 
-            return AccessTools.Method(type, "Tick");
+            return AccessTools.Method(type, "TickInterval");
         }
 
-        public static void Postfix(ref Caravan __instance)
+        public static void Postfix(ref Caravan __instance, int delta)
         {
             if (ModsConfig.BiotechActive)
                 CaravanRepairUtility.CheckRepair(__instance);

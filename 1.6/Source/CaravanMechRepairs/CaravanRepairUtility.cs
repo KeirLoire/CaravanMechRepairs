@@ -12,7 +12,6 @@ namespace CaravanMechRepairs
 
         public static void CheckRepair(Caravan caravan)
         {
-
             foreach (var pawn in caravan.pawns)
             {
                 if (IsMechanitorValid(pawn))
@@ -22,7 +21,6 @@ namespace CaravanMechRepairs
                     if (pawn.IsHashIntervalTick(repairIntervalTicks))
                         TryRepairToAnyMech(caravan);
                 }
-                    
             }
         }
 
