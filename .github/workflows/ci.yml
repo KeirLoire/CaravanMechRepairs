@@ -13,14 +13,17 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: [self-hosted, Windows, X64]
+    runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Restore NuGet packages
+      - name: Setup MSBuild.exe
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Restore dependencies
         run: |
-          nuget restore 1.5\Source
-          nuget restore 1.6\Source
+          msbuild 1.5\Source\CaravanMechRepairs.sln /t:Restore /p:Configuration=Release
+          msbuild 1.6\Source\CaravanMechRepairs.sln /t:Restore /p:Configuration=Release
 
       - name: Build assemblies
         run: |
